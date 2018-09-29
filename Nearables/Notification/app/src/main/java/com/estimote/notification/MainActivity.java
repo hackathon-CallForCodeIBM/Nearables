@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 NotificationsManager.mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.alarm_sound);
             }
             trackButton.setText("Start Tracking!");
-            Tracker4Pet application = (Tracker4Pet) getApplication();
+            Tracker4Beacon application = (Tracker4Beacon) getApplication();
             application.getNotificiationsManager().stopMonitoring();
             trackButton.setBackgroundColor(getResources().getColor(android.R.color.holo_orange_light));
         }
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
             }
             try {
                 Float distance = Float.parseFloat(distanceString);
-                Tracker4Pet application = (Tracker4Pet) getApplication();
+                Tracker4Beacon application = (Tracker4Beacon) getApplication();
                 application.getNotificiationsManager().startMonitoring(distance);
             } catch (Exception e) {
                 e.printStackTrace();
@@ -74,8 +74,8 @@ public class MainActivity extends AppCompatActivity {
     public void onClickAnalytics(View view){
 
         Log.i("onClick","Analytics");
-        Intent intent = new Intent(MainActivity.this, AnalyticsActivity.class);
-        startActivity(intent);
+        //Intent intent = new Intent(MainActivity.this, AnalyticsActivity.class);
+        //startActivity(intent);
     }
 
     @Override
@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final Tracker4Pet application = (Tracker4Pet) getApplication();
+        final Tracker4Beacon application = (Tracker4Beacon) getApplication();
 
         final double step = 0.1;
         final int min = 0 ;

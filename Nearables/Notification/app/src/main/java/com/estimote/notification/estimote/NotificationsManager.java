@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 import com.estimote.internal_plugins_api.cloud.proximity.ProximityAttachment;
 import com.estimote.notification.MainActivity;
-import com.estimote.notification.Tracker4Pet;
+import com.estimote.notification.Tracker4Beacon;
 import com.estimote.proximity_sdk.proximity.ProximityObserver;
 import com.estimote.proximity_sdk.proximity.ProximityObserverBuilder;
 import com.estimote.proximity_sdk.proximity.ProximityZone;
@@ -72,7 +72,7 @@ public class NotificationsManager {
     public void lostAndFound(String beaconName) {
         proximityObserver = null;
         proximityObserver =
-                new ProximityObserverBuilder(context, ((Tracker4Pet) context).cloudCredentials)
+                new ProximityObserverBuilder(context, ((Tracker4Beacon) context).cloudCredentials)
                         .withOnErrorAction(new Function1<Throwable, Unit>() {
                             @Override
                             public Unit invoke(Throwable throwable) {
@@ -111,7 +111,7 @@ public class NotificationsManager {
     }
     public void startMonitoring(float distance) {
          proximityObserver =
-                new ProximityObserverBuilder(context, ((Tracker4Pet) context).cloudCredentials)
+                new ProximityObserverBuilder(context, ((Tracker4Beacon) context).cloudCredentials)
                         .withOnErrorAction(new Function1<Throwable, Unit>() {
                             @Override
                             public Unit invoke(Throwable throwable) {
