@@ -1,1 +1,3 @@
 # Nearables_latest
+
+>We have developed an android app which communicates with the beacons via Bluetooth. This solution can be used in supermarkets that use beacons for promotions. During a disaster situation, the beacons would come in handy to direct customers to the nearest exit doors using the store map thus making it language independent, requiring no human interaction. This application is easy to adapt as the beacons are already existing in the current market and approximately costs $17 per beacon. Another important use case of this application is to track pets/people trapped under debris during earthquakes from afar, thus making it easier and faster for rescue volunteers to save/help them. 
